@@ -5,8 +5,7 @@ def longestWord(string):
     stringList = string.split(" ")
     for word in stringList: #iterate over stringList array
         if len(word)> length: #check lengths
-            words = []
-            words.append(word)
+            words = [word]
             #lonWord = word
             length = len(word)
         elif len(word)== length:

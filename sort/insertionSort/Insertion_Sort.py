@@ -10,7 +10,7 @@ def Insertion_Sort(A):
             j-=1
         A[j+1] = key
 
-A = [randint(-100, 100) for i in range(10)]
+A = [randint(-100, 100) for _ in range(10)]
 print("Orignal Array = ", *A)
 Insertion_Sort(A)
 print(" Sorted array = ", *A)

@@ -30,7 +30,7 @@ def getKey():
 
     while True:
 
-        print('Enter the key number (1-%s)' % (MAX_KEY_SIZE))
+        print(f'Enter the key number (1-{MAX_KEY_SIZE})')
 
         key = int(input())
 

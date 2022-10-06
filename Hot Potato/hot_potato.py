@@ -5,11 +5,11 @@
 from typing import List
 
 def hot_potato_game(namelist: List[str], repetitions: int) -> List[str]:
-    queue = list()
+    queue = []
     for name in namelist:
         queue.insert(0, name)
 
-    for rep in range(repetitions):
+    for _ in range(repetitions):
         person = queue.pop()
         queue.insert(0, person)
 

@@ -2,16 +2,16 @@
 RUN = 32 
  
 def insertionSort(arr, left, right):  
-   
+
     for i in range(left + 1, right+1):  
-       
+
         temp = arr[i]  
         j = i - 1 
         while arr[j] > temp and j >= left:  
-           
+
             arr[j+1] = arr[j]  
             j -= 1
-           
+
         arr[j+1] = temp  
     
 # merge function merges the sorted runs  
@@ -19,31 +19,31 @@ def merge(arr, l, m, r):
    
     # original array is broken in two parts  
     # left and right array  
-    len1, len2 =  m - l + 1, r - m  
-    left, right = [], []  
-    for i in range(0, len1):  
-        left.append(arr[l + i])  
-    for i in range(0, len2):  
+    len1, len2 =  m - l + 1, r - m
+    left, right = [], []
+    for i in range(len1):  
+        left.append(arr[l + i])
+    for i in range(len2):  
         right.append(arr[m + 1 + i])  
-    
-    i, j, k = 0, 0, l   
+
+    i, j, k = 0, 0, l
     while i < len1 and j < len2:  
-       
+
         if left[i] <= right[j]:  
             arr[k] = left[i]  
             i += 1 
-           
+
         else: 
             arr[k] = right[j]  
             j += 1 
-           
-        k += 1 
+
+        k += 1
     while i < len1:  
-       
+
         arr[k] = left[i]  
         k += 1 
         i += 1
-    
+
     # copy remaining element of right, if any  
     while j < len2:  
         arr[k] = right[j]  
@@ -74,20 +74,20 @@ def timSort(arr, n):
 # utility function to print the Array  
 def printArray(arr, n):  
    
-    for i in range(0, n):  
-        print(arr[i], end = " ")  
+    for i in range(n):  
+        print(arr[i], end = " ")
     print()  
    
     
 # Driver program to test above function  
 if __name__ == "__main__": 
-   
+
     arr = [5, 21, 7, 23, 19]  
     n = len(arr)  
     print("Given Array is")  
     printArray(arr, n)  
-    
+
     timSort(arr, n)  
-    
+
     print("After Sorting Array is")  
     printArray(arr, n)

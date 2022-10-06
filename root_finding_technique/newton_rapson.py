@@ -19,5 +19,5 @@ while abs(f(m))>e:
 			print (i,x0,m,f(m))
 			m = m-f(m)/f2(m)
 			i= i+1
-			
+
 print ("Root of polynomial :",m)

@@ -1,8 +1,5 @@
 def sum_of_numbers_iterative(n):
-    the_sum=0
-    for i in range(n):
-        the_sum += (i+1)
-    return the_sum
+    return sum((i+1) for i in range(n))
 print(sum_of_numbers_iterative(int(input("Enter a number: "))))
 #5+4+3+2+1=15
 

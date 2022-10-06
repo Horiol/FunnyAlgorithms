@@ -19,10 +19,7 @@ def sort(list, verbose=False):
     
 def isSorted(list):
     """ check in O(n) if the list is sorted """
-    for i in range(len(list)-1):
-        if list[i+1] < list[i]: 
-            return False
-    return True
+    return all(list[i+1] >= list[i] for i in range(len(list)-1))
 
 def print_list(list):
     """ prints the list without a line break at the end """

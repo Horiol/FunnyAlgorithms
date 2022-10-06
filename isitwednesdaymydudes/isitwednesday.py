@@ -1,5 +1,5 @@
 import datetime as day
-myDay = day.datetime.today().weekday()
+myDay = day.datetime.now().weekday()
 
 if (myDay == "2"):
     print("It is Wednesday, my dudes\n")
