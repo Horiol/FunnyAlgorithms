@@ -3,9 +3,8 @@ import sys
 class Graph(): 
   
     def __init__(self, vertices): 
-        self.V = vertices 
-        self.graph = [[0 for column in range(vertices)]  
-                      for row in range(vertices)] 
+        self.V = vertices
+        self.graph = [[0 for _ in range(vertices)] for _ in range(vertices)] 
   
     def printSolution(self, dist): 
         print "Vertex tDistance from Source"

@@ -2,10 +2,7 @@ import random
 
 
 def is_sorted(array):
-    for i in range(1, len(array)):
-        if array[i - 1] > array[i]:
-            return False
-    return True
+    return all(array[i - 1] <= array[i] for i in range(1, len(array)))
 
 
 def thanos_sort(universe):
@@ -13,8 +10,8 @@ def thanos_sort(universe):
         return universe
 
     size = len(universe)
-    indexes = range(0, size)
-    half = int(size / 2)
+    indexes = range(size)
+    half = size // 2
 
     to_die = random.sample(indexes, half)
     universe = [i for j, i in enumerate(universe) if j not in to_die]

@@ -17,6 +17,6 @@ if __name__ == "__main__":
     s2 = input("Enter another word: ")
 
     if is_anagram(s1, s2):
-        print(s1 + " and " + s2 + " are anagrams")
+        print(f"{s1} and {s2} are anagrams")
     else:
-        print(s1 + " and " + s2 + " are not anagrams")
+        print(f"{s1} and {s2} are not anagrams")

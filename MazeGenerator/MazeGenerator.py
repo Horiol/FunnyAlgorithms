@@ -77,10 +77,8 @@ def color_wall(skk): return("\033[1;90;100m {:2}\033[00m" .format(skk))
 def color_floor(skk): return("\033[1;107m {:2}\033[00m" .format(skk)) 
 
 for line in maze:
-    str_builder = ''
-    for item in line:
-        if item == 1:
-            str_builder += color_wall(item)
-        else: 
-            str_builder += color_floor(item)
+    str_builder = ''.join(
+        color_wall(item) if item == 1 else color_floor(item) for item in line
+    )
+
     print(str_builder)

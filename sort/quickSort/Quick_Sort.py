@@ -18,7 +18,7 @@ def QuickSort(A, low, high):
         QuickSort(A, low, mid)
         QuickSort(A, mid+1, high)
 
-A = [randint(-200,200) for i in range(10)]
+A = [randint(-200,200) for _ in range(10)]
 print("Orignal array = ", *A)
 QuickSort(A, 0, len(A))
 print(" Sorted array = ", *A)

@@ -10,10 +10,7 @@ Since on average, it may take n! permutations, its average complexity is conside
 import random
 
 def sort_check(array):
-    for i in range(0,len(array)-1):
-        if array[i]>array[i+1]:
-            return False
-    return True
+    return all(array[i] <= array[i+1] for i in range(len(array)-1))
 def bozo_sort(array):
     while not sort_check(array):
         i,j=random.randint(0,len(array)-1),random.randint(0,len(array)-1)

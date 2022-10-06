@@ -4,7 +4,7 @@ from random import randint
 
 def build_max_heap(arr):
     length = len(arr)
-    for i in range(int(length/2), -1, -1):
+    for i in range(length // 2, -1, -1):
         max_heapify(arr, i, length)
 
     #  heap sort
@@ -17,11 +17,7 @@ def build_max_heap(arr):
 def max_heapify(arr, i, heapSize):
     left = (2 * i) + 1
     right = (2 * i) + 2
-    if left < heapSize and arr[left] > arr[i]:
-        largest = left
-    else:
-        largest = i
-
+    largest = left if left < heapSize and arr[left] > arr[i] else i
     if right < heapSize and arr[right] > arr[largest]:
         largest = right
 

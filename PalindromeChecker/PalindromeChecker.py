@@ -1,10 +1,6 @@
 def check_palin(string):
     n = len(string)
-    for i in range(int(n/2)):
-        if(string[i]!=string[n-i-1]):
-            return False
-    
-    return True
+    return all(string[i] == string[n-i-1] for i in range(n // 2))
 
 def main():
     print("Input the String: ")

@@ -19,7 +19,7 @@ def get_next_term(n):
 def print_look_and_say(seed, n):
     print(seed)
     next_term = get_next_term(seed)
-    for i in range(n-1):
+    for _ in range(n-1):
         print(next_term)
         next_term = get_next_term(next_term)
 

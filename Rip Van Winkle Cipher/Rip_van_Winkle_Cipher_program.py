@@ -28,19 +28,14 @@ if user_option == "D":
       offset = alphabet_dictionary[letter] - timeslot1[timeslot_index]
       print(timeslot1[timeslot_index])
       print(alphabet_dictionary[letter])
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
     elif user_timeslot == "2":
       offset = alphabet_dictionary[letter] - timeslot2[timeslot_index]
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
     else:
       offset = alphabet_dictionary[letter] - timeslot3[timeslot_index]
       while offset < 0:
         offset = offset + 26
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
-
+    encrypted_letter = alphabet[offset]
+    new_word.append(encrypted_letter)
 elif user_option == "E":
   print("What timeslot would you like to pick?\n")
   print("Timeslot: ")
@@ -48,7 +43,7 @@ elif user_option == "E":
   print("What word would you like to encrypt dude?\n")
   print("Word: ")
   user_word = input()
-  
+
   for letter in user_word:
     timeslot_index = timeslot_index + 1
     print("\n",letter, timeslot_index)
@@ -56,22 +51,13 @@ elif user_option == "E":
       offset = timeslot1[timeslot_index] + alphabet_dictionary[letter]
       print(timeslot1[timeslot_index])
       print(alphabet_dictionary[letter])
-      while offset > 26:
-        offset = offset - 26
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
     elif user_timeslot == "2":
       offset = timeslot2[timeslot_index] + alphabet_dictionary[letter]
-      while offset > 26:
-        offset = offset - 26
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
     else:
       offset = timeslot3[timeslot_index] + alphabet_dictionary[letter]
-      while offset > 26:
-        offset = offset - 26
-      encrypted_letter = alphabet[offset]
-      new_word.append(encrypted_letter)
-
+    while offset > 26:
+      offset = offset - 26
+    encrypted_letter = alphabet[offset]
+    new_word.append(encrypted_letter)
 complete_new_word = "".join(new_word)
 print("\nYour new word is " + complete_new_word)

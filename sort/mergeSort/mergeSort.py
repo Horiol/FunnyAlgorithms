@@ -24,7 +24,7 @@ def Merge_Sort(A, start, end):
 		Merge_Sort(A, mid, end)
 		Merge(A, start, mid, end)
 
-A = [randint(0,100) for i in range(10)]
+A = [randint(0,100) for _ in range(10)]
 print("Orignal array = ", *A)
 Merge_Sort(A, 0, len(A))
 print(" Sorted array = ", *A)

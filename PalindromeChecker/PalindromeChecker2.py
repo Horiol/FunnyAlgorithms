@@ -1,7 +1,5 @@
 def PalindromeCheck(s):
-	if(s==s[::-1]):
-		return True
-	return False
+	return s == s[::-1]
 s=input()
 if(PalindromeCheck(s)):
 	print("It is a palindrome!!")
